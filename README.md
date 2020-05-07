@@ -41,7 +41,7 @@ order by amount desc
 >>>AMERIQUEST MORTGAGE CO	OGILVY GOVERNMENT RELATIONS	$240,000.00	BAN	Banking
 ```
 
-2. Or, sometimes self pays(expenses) to oneself for its own lobbying purpose
+2-1. Or, sometimes self pays(expenses) to oneself for its own lobbying purpose
 ```sql
 -- with the same query above,
 >>>client_full_name	registrant_full_name	amount	issue_code	issue_code_description
