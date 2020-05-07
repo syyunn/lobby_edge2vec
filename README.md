@@ -17,7 +17,7 @@ Corporation pays to `Registrants` or its `in-house` lobbying team.
 For example, if the company is `Ameriquest` 
 
 1. Get `_client_uuid`
-- assume we are interested in the company named "Ameriquest Mortgage"
+- **Assume we are interested in the company named `Ameriquest Mortgage`**
 
 ```sql
 select *
