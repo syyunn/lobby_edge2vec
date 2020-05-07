@@ -27,8 +27,7 @@ where ciir.client_full_name_used ilike '%ameriquest%'
 >>> 8f0f26aa-6410-5f0e-9d4b-2229d5324ac8	AMERIQUEST MORTGAGE COMPANY	424328982
 ```
 
-2. Client pays `money` to `lobbyists` or `registrants` or Self-cients pays(expenses) for its own lobbying purpose
-2-1. Client pays `money` to `lobbyists`
+2. Client pays `money` to `lobbyists` or `registrants` 
 ```sql
 select c."client_full_name", regist."registrant_full_name", r.amount, i.issue_code, ic.issue_code_description 
 from consolidated_layer_reports.reports r 
@@ -42,3 +41,9 @@ order by amount desc
 >>>AMERIQUEST MORTGAGE CO	OGILVY GOVERNMENT RELATIONS	$240,000.00	BAN	Banking
 ```
 
+2. Or, sometimes self pays(expenses) to oneself for its own lobbying purpose
+```sql
+-- with the same query above,
+>>>client_full_name	registrant_full_name	amount	issue_code	issue_code_description
+>>>AMERIQUEST MORTGAGE CO	AMERIQUEST MORTGAGE CO	$20,000.00	BAN	Banking
+```
