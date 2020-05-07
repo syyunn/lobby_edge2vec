@@ -20,5 +20,6 @@ For example, if the company is `Ameriquest`
 select *
 from lobbying_clients__infogroup_companies.clients__infogroup_id___rough ciir 
 where ciir.client_full_name_used ilike '%ameriquest%'
+>>> "_client_uuid"	client_full_name_used	infogroup_id
 >>> 8f0f26aa-6410-5f0e-9d4b-2229d5324ac8	AMERIQUEST MORTGAGE COMPANY	424328982
 ```
