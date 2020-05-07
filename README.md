@@ -54,4 +54,4 @@ order by amount desc
 
 2-2. Thus, more generally, under the context of lobbying, entities are giving money from one to another, and also, gives money to itself.
 
-<p align="center"> <img src="Screen%20Shot%202020-05-08%20at%202.37.44%20AM.png"/> </p>
+<p align="center"> <img src="Screen%20Shot%202020-05-08%20at%203.03.13%20AM.png"/> </p>
