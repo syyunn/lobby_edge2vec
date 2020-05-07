@@ -7,3 +7,6 @@ Cash flows are represented in a directed graph `who gives how much to whom`. The
 ## Resources
 Learning Edge Representations via Low-Rank Asymmetric
 Projections https://arxiv.org/pdf/1705.05615.pdf
+
+## Known facts
+- In general, randomwalk methods outperform “eigen” methods on producing vector representations that preserve the graph structure.
