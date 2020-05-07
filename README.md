@@ -50,5 +50,5 @@ order by amount desc
 >>>client_full_name	registrant_full_name	amount	issue_code	issue_code_description
 >>>AMERIQUEST MORTGAGE CO	AMERIQUEST MORTGAGE CO	$20,000.00	BAN	Banking
 ```
+![](Screen%20Shot%202020-05-08%20at%202.37.44%20AM.png)
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/ky318U2"><a href="//imgur.com/a/ky318U2"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
