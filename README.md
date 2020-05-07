@@ -10,3 +10,11 @@ Projections https://arxiv.org/pdf/1705.05615.pdf
 
 ## Known facts
 - In general, randomwalk methods outperform “eigen” methods on producing vector representations that preserve the graph structure.
+
+## List of information about who gives money to whom
+
+Corporation pays to `Registrants` or its `in-house` lobbying team.
+For example, if the company is `Ameriquest` 
+
+```sql
+```
