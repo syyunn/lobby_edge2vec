@@ -60,7 +60,7 @@ Remember, `Money` means `On Behalf Of`.
 
 3. `PAC` and its `Legislative Activity`
 
-Now we want to know which `PAC` server for which purpose. For example, we want to know what `Halvorson for Congress` does in the congress and why/how do they get those money from `Safari Club Int'l` via `Ogilvy` upon their legislative action.
+Now we want to know which `PAC` server for which purpose. For example, we want to know what `Halvorson for Congress` does in the congress and why/how do they get those money from `Safari Club Int'l` via `Ogilvy` upon their legislative action. To do that, we need to find who's the recipient of the 
 
 ```sql
 select distinct cc.sub_id, c.committee_name, c.committee_id, c.report_year, cc.report_year, cc.candidate_id, cd.candidate_name, cc.tran_amount
@@ -73,4 +73,16 @@ where c.committee_name ilike '%halvorson for congress%'
 4050220131188538969	HALVORSON FOR CONGRESS	C00539932	2014	2014	H8AZ01104	HALVORSON, DEBORAH L	$1,000.00
 4050720091114699887	HALVORSON FOR CONGRESS	C00440016	2008	2008	H8LA04241	HALVORSON, DEBORAH 'DEBBIE'	$2,000.00
 4072920111141824811	HALVORSON FOR CONGRESS	C00440016	2012	2012	H6NC08111	HALVORSON, DEBORAH	$2,500.00
+```
+
+or, more simply just using ld203
+
+```sql
+select cd.organization_name, cb.contributor_name, cb.payee_name, cb.amount, cb.recipient_name 
+from relational___campaign.contributiondisclosure cd
+	inner join relational___campaign.contributions cb using ("ld203_uuid")
+where cd.organization_name ilike '%Ogilvy%' and cb.contributor_name ilike '%Safari%' and cb.payee_name ilike '%halvorson%'
+order by amount desc
+>> organization_name	contributor_name	payee_name	amount	recipient_name
+>> Ogilvy Government Relations	Safari Club International PAC	Halvorson For Congress	$5,000.00	Deborah L. Halvorson
 ```
