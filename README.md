@@ -58,8 +58,9 @@ order by amount desc
 
 Remember, `Money` means `On Behalf Of`.
 
-3. `PAC` and its `Political Activity` 
-Now we want to know which `PAC` server for which purpose. For example, we want to know `Halvorson for Congress` does what in the congress and get those money from `Safari Club Int'l` via `Ogilvy`. 
+3. `PAC` and its `Legislative Activity`
+
+Now we want to know which `PAC` server for which purpose. For example, we want to know what `Halvorson for Congress` does in the congress and why/how do they get those money from `Safari Club Int'l` via `Ogilvy` upon their legislative action.
 
 ```sql
 select distinct cc.sub_id, c.committee_name, c.committee_id, c.report_year, cc.report_year, cc.candidate_id, cd.candidate_name, cc.tran_amount
