@@ -62,8 +62,14 @@ Remember, `Money` means `On Behalf Of`.
 Now we want to know which `PAC` server for which purpose. For example, we want to know `Halvorson for Congress` does what in the congress and get those money from `Safari Club Int'l` via `Ogilvy`. 
 
 ```sql
-select * 
-from relational_layer_campaign.committee___clean cc 
-where cc.committee_name ilike '%halvorson%'
->>>
+select distinct cc.sub_id, c.committee_name, c.committee_id, c.report_year, cc.report_year, cc.candidate_id, cd.candidate_name, cc.tran_amount
+from relational_layer_campaign.committee___clean c
+	inner join relational_layer_campaign.committee_to_candidate_contribution___clean cc on cc.committee_id = c.committee_id and cc.report_year = c.report_year
+	inner join relational_layer_campaign.candidate cd on cd.candidate_id= c.candidate_id and cd.report_year = c.report_year 
+where c.committee_name ilike '%halvorson for congress%'
+>>> sub_id	committee_name	committee_id	report_year	report_year	candidate_id	candidate_name	tran_amount
+>>> 4050220131188538966	HALVORSON FOR CONGRESS	C00539932	2014	2014	H8IL11113	HALVORSON, DEBORAH L	$1,000.00
+4050220131188538969	HALVORSON FOR CONGRESS	C00539932	2014	2014	H8AZ01104	HALVORSON, DEBORAH L	$1,000.00
+4050720091114699887	HALVORSON FOR CONGRESS	C00440016	2008	2008	H8LA04241	HALVORSON, DEBORAH 'DEBBIE'	$2,000.00
+4072920111141824811	HALVORSON FOR CONGRESS	C00440016	2012	2012	H6NC08111	HALVORSON, DEBORAH	$2,500.00
 ```
