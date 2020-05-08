@@ -86,3 +86,13 @@ order by amount desc
 >> organization_name	contributor_name	payee_name	amount	recipient_name
 >> Ogilvy Government Relations	Safari Club International PAC	Halvorson For Congress	$5,000.00	Deborah L. Halvorson
 ```
+
+Now, we can retrieve the `bioguide_id`, the legislator's identifier, with the name, `Deborah L. Halvorson'.
+
+```sql
+select *
+from consolidated_layer_bills.legislators l 
+where last_name ilike '%halvorson%' and first_name ilike '%deborah%'
+>>> bioguide_id	first_name	last_name
+>>> H001044	Deborah	Halvorson
+```
