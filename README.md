@@ -57,3 +57,13 @@ order by amount desc
 <p align="center"> <img src="Screen%20Shot%202020-05-08%20at%203.03.13%20AM.png"/> </p>
 
 Remember, `Money` means `On Behalf Of`.
+
+3. `PAC` and its `Political Activity` 
+Now we want to know which `PAC` server for which purpose. For example, we want to know `Halvorson for Congress` does what in the congress and get those money from `Safari Club Int'l` via `Ogilvy`. 
+
+```sql
+select * 
+from relational_layer_campaign.committee___clean cc 
+where cc.committee_name ilike '%halvorson%'
+>>>
+```
