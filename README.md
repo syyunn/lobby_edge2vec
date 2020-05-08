@@ -75,7 +75,7 @@ where c.committee_name ilike '%halvorson for congress%'
 4072920111141824811	HALVORSON FOR CONGRESS	C00440016	2012	2012	H6NC08111	HALVORSON, DEBORAH	$2,500.00
 ```
 
-or, more simply just using ld203
+or, more simply just using ld203, we can find the `payee`, who's gonna be the recipient of the money contributed through the path of `PAC -> Ogilvy -> PAC` 
 
 ```sql
 select cd.organization_name, cb.contributor_name, cb.payee_name, cb.amount, cb.recipient_name 
