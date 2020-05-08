@@ -96,3 +96,19 @@ where last_name ilike '%halvorson%' and first_name ilike '%deborah%'
 >>> bioguide_id	first_name	last_name
 >>> H001044	Deborah	Halvorson
 ```
+
+And then, we the `bioguide_id`, we can search for her legislative actios history:
+```sql
+select distinct b.bill_sponsor_id, b.bill_id, t.bill_title, s.subject_name 
+from consolidated_layer_bills.bills b
+	inner join consolidated_layer_bills.titles t using ("bill_id")
+	inner join consolidated_layer_bills.subjects s using ("bill_id")
+where bill_sponsor_id = 'H001044'
+>>> bill_sponsor_id	bill_title	subject_name	bill_summary
+>>> H001044	2000 Emergency Supplemental Appropriations Act	Adoption	"10/22/2009--Introduced.
+Families of Disabled Veterans Work Opportunity Act of 2009 - Amends the Internal Revenue Code to allow a work opportunity tax credit for wages paid to a certified family member of a veteran with a service-connected disability who is unable to work."
+```
+
+
+
+
