@@ -107,6 +107,12 @@ where bill_sponsor_id = 'H001044'
 >>> bill_sponsor_id	bill_title	subject_name	bill_summary
 >>> H001044	2000 Emergency Supplemental Appropriations Act	Adoption	"10/22/2009--Introduced.
 Families of Disabled Veterans Work Opportunity Act of 2009 - Amends the Internal Revenue Code to allow a work opportunity tax credit for wages paid to a certified family member of a veteran with a service-connected disability who is unable to work."
+    H001044	2000 Emergency Supplemental Appropriations Act	Advertising	"10/22/2009--Introduced.
+Families of Disabled Veterans Work Opportunity Act of 2009 - Amends the Internal Revenue Code to allow a work opportunity tax credit for wages paid to a certified family member of a veteran with a service-connected disability who is unable to work."
+    H001044	2000 Emergency Supplemental Appropriations Act	Affordable housing	"10/22/2009--Introduced.
+Families of Disabled Veterans Work Opportunity Act of 2009 - Amends the Internal Revenue Code to allow a work opportunity tax credit for wages paid to a certified family member of a veteran with a service-connected disability who is unable to work."
+    H001044	2000 Emergency Supplemental Appropriations Act	Agricultural appropriations	"10/22/2009--Introduced.
+Families of Disabled Veterans Work Opportunity Act of 2009 - Amends the Internal Revenue Code to allow a work opportunity tax credit for wages paid to a certified family member of a veteran with a service-connected disability who is unable to work."
 ```
 
 
