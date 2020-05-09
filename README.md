@@ -99,22 +99,12 @@ where last_name ilike '%halvorson%' and first_name ilike '%deborah%'
 
 And then, we the `bioguide_id`, we can search for her legislative actios history:
 ```sql
-select distinct b.bill_sponsor_id, b.bill_id, t.bill_title, s.subject_name 
+select distinct b.bill_sponsor_id, s.subject_name, b.bill_id, b.congress_session, t.bill_title, b.bill_summary, b.bill_introduced_datetime, b.bill_date_updated
 from consolidated_layer_bills.bills b
-	inner join consolidated_layer_bills.titles t using ("bill_id")
-	inner join consolidated_layer_bills.subjects s using ("bill_id")
+	inner join consolidated_layer_bills.titles t using ("bill_id", "congress_session")
+	inner join consolidated_layer_bills.subjects s using ("bill_id", "congress_session")
 where bill_sponsor_id = 'H001044'
->>> bill_sponsor_id	bill_title	subject_name	bill_summary
->>> H001044	2000 Emergency Supplemental Appropriations Act	Adoption	"10/22/2009--Introduced.
-Families of Disabled Veterans Work Opportunity Act of 2009 - Amends the Internal Revenue Code to allow a work opportunity tax credit for wages paid to a certified family member of a veteran with a service-connected disability who is unable to work."
-    H001044	2000 Emergency Supplemental Appropriations Act	Advertising	"10/22/2009--Introduced.
-Families of Disabled Veterans Work Opportunity Act of 2009 - Amends the Internal Revenue Code to allow a work opportunity tax credit for wages paid to a certified family member of a veteran with a service-connected disability who is unable to work."
-    H001044	2000 Emergency Supplemental Appropriations Act	Affordable housing	"10/22/2009--Introduced.
-Families of Disabled Veterans Work Opportunity Act of 2009 - Amends the Internal Revenue Code to allow a work opportunity tax credit for wages paid to a certified family member of a veteran with a service-connected disability who is unable to work."
-    H001044	2000 Emergency Supplemental Appropriations Act	Agricultural appropriations	"10/22/2009--Introduced.
-Families of Disabled Veterans Work Opportunity Act of 2009 - Amends the Internal Revenue Code to allow a work opportunity tax credit for wages paid to a certified family member of a veteran with a service-connected disability who is unable to work."
 ```
 
-
-
+4. Now you can cehc
 
