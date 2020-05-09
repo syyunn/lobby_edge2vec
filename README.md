@@ -106,5 +106,14 @@ from consolidated_layer_bills.bills b
 where bill_sponsor_id = 'H001044'
 ```
 
-4. Now you can cehc
+or, for searching of cosponsor with the `Debora L. Halvorson`'s bioguide_id, `H001044`
+
+```sql
+select distinct cs.cosponsor_id, s.subject_name, b.bill_id, b.congress_session, t.bill_title, b.bill_introduced_datetime, b.bill_date_updated
+from consolidated_layer_bills.bills b
+	inner join consolidated_layer_bills.titles t using ("bill_id", "congress_session") --b.bill_id = t.bill_id and b.congress_session =t.congress_session 
+	inner join consolidated_layer_bills.subjects s using ("bill_id", "congress_session")
+	inner join consolidated_layer_bills.cosponsors cs using ("bill_id", "congress_session")
+where cs.cosponsor_id = 'H001044' and '%animal%' ilike t.bill_title 
+```
 
